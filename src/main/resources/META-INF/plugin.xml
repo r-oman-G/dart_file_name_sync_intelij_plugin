@@ -1,0 +1,40 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>rgrunin.dart.filenamesync.dart_file_name_sync_intelij_plugin</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+    <name>Dart_file_name_sync_intelij_plugin</name>
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+    <vendor email="grunin.rg@gmail.com" url="https://github.com/r-oman-G">Roman Grunin</vendor>
+
+    <description><![CDATA[
+    <h2>Synchronize Dart Filename</h2>
+    <p><strong>Synchronize Dart Filename</strong> is an invaluable tool for Flutter and Dart developers seeking to maintain a clean and consistent codebase. This plugin automates the synchronization of Dart file names with the class names defined within them, ensuring that your project's readability and maintainability are enhanced.</p>
+    <p>Features include:</p>
+    <ul>
+        <li><strong>One-Click Update:</strong> Update Dart file names in one click to match the public class names defined within the file.</li>
+        <li><strong>Seamless Integration:</strong> Works quietly in the background, with minimal configuration needed, allowing you to focus more on coding rather than managing file names.</li>
+        <li><strong>Error Checking:</strong> Prevents naming conflicts and checks for errors before making any changes to file names to ensure your project's integrity.</li>
+    </ul>
+    <p>This plugin is perfect for any Dart developer looking to reduce the overhead of manually keeping file and class names in sync. It's designed to make your development process smoother and error-free. Enhance your productivity and code quality with <em>Synchronize Dart Filename</em>.</p>
+  ]]></description>
+
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <!-- Extension points defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+    <extensions defaultExtensionNs="com.intellij">
+
+    </extensions>
+    <actions>
+        <action id="SyncClassNameWithDartFileAction" class="SyncClassNameWithDartFileAction"
+                text="Sync Class Name With Dart File">
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+        </action>
+    </actions>
+</idea-plugin>
